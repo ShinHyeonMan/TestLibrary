@@ -1,34 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
-
-ext {
-    bintrayRepo = "maven"
-    bintrayName = "library"
-
-    libraryName = 'library'
-
-
-    publishedGroupId = 'com.hm'
-    artifact = 'library'
-    libraryVersion = '1.0.1'
-
-
-    libraryDescription = 'Test'
-    siteUrl = 'https://github.com/ShinHyeonMan/TestLibrary'
-    gitUrl = 'https://github.com/ShinHyeonMan/TestLibrary.git'
-    developerId = 'cswsshm0627'
-    developerName = 'HyeonMan'
-    developerEmail = 'cswsshm0627@gmail.com'
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
 
 android {
     compileSdkVersion 27
-
-
 
     defaultConfig {
         minSdkVersion 16
@@ -58,7 +31,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-if (project.rootProject.file('local.properties').exists()) {
-    apply from: 'http://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-    apply from: 'http://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
-}
+apply from: 'publish.gradle'
