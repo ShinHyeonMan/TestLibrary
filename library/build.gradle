@@ -22,6 +22,12 @@ android {
 
 }
 
+ext {
+    GROUP = 'com.hm'  // required.
+    ARTIFACT = 'library' // required.
+    VERSION = '1.0.0' // required.
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
