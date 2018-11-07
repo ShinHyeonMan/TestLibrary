@@ -26,6 +26,13 @@ ext {
     GROUP = 'com.hm'  // required.
     ARTIFACT = 'library' // required.
     VERSION = '1.0.0' // required.
+    BINTRAY_NAME = 'library'
+    BINTRAY_REPO = 'maven'
+    VCS_URL = 'https://github.com/ShinHyeonMan/TestLibrary.git'
+    LICENSES = ['Apache-2.0']
+    PUBLISH = true
+    OVERRIDE = false
+    DRYRUN = false
 }
 
 dependencies {
